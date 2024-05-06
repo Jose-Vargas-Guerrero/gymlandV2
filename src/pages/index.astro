@@ -1,0 +1,329 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/astroComponents/Footer.astro';
+---
+
+
+<Layout title="gymland">
+	<div class="herosales">
+		<h2>¡Comienza el año con estilo! Renueva tu año, viste con confianza!</h2>
+		<a href="/products" class="more">Ver Productos</a>
+	</div>
+	<div class="hero">
+		<h2>¡Bienvenidos a nuestro catálogo GYMLANDHN!</h2>
+		<p>Descubre un mundo de estilo y comodidad en donde la moda deportiva se encuentra con la funcionalidad</p>
+		<a href="/products" class="more">Ver Productos</a>
+	</div>
+	<div class="banner1">
+		<h2 class="bannerTitle1">Poder y Estilo con Women's Best</h2>
+		<p class="bannerText1">Acentúa tus curvas naturales"</p>
+		<a href="/wbest" class="more2">Ver Productos</a>
+	</div>
+	<div class="banner">
+		<h2 class="bannerTitle">Eleva tu Día a Día</h2>
+		<p class="bannerText">Los productos básicos y cómodos de Gymshark te acompañan en el camino</p>
+		<a href="/products" class="more2">Ver Productos</a>
+	</div>
+	<Footer/>
+</Layout>
+
+<style>
+	/* fonts
+		montserrat: font-family: 'Montserrat', sans-serif;f;
+		font-family: 'Roboto', sans-serif;
+	*/
+
+	.herosales{
+		z-index: 0;
+		margin-top: 100px;
+		position: relative;
+		overflow: hidden;
+		height: 80vh;
+		max-width: 100vw !important;
+		background-image: url(https://cdn.shopify.com/s/files/1/0744/0203/files/01.WB_DefineNewColours_LaunchBanner_3000x1270_20231221_pm_desktop_1920x.jpg?v=1704705793);
+		background-position: center;
+		background-size: cover;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+	}
+
+	
+	.herosales > h2{
+		width: 500px;
+		text-align: left;
+		margin-left: 60px;
+		z-index: 2;
+		font-family: 'Montserrat', sans-serif;
+		color: #ffffff;
+		font-size: 3rem;
+	}
+
+	.hero{
+		z-index: 0;
+		margin-top: 100px;
+		position: relative;
+		overflow: hidden;
+		height: 80vh;
+		max-width: 100vw !important;
+		background-image: url(https://images.ctfassets.net/wl6q2in9o7k3/3C4z25aqQZyHupv4FnpWjA/793f5c2ace6a19617ce7b65b17a0d3ce/GY85408_C181-010_INTL_Headless_Desktop_3840x1140_DUAL.jpg?w=2048&q=100&fm=webp);
+		background-position: center;
+		background-size: cover;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+	}
+	.hero::before {
+  		content: "";
+  		position: absolute;
+  		top: 0;
+  		left: 0;
+  		height: 80vh;
+		width: 100vw;
+		background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, transparent 100%);
+  		z-index: 1; 
+	}
+
+	.hero > h2{
+		width: 500px;
+		text-align: left;
+		margin-left: 60px;
+		z-index: 2;
+		font-family: 'Montserrat', sans-serif;
+		color: #ffffff;
+		font-size: 3rem;
+	}
+
+	.hero > p{
+		font-family: 'Roboto', sans-serif;
+		font-size: 1.2rem;
+		color: #ffffff;
+		position: relative;
+		z-index: 2;
+		line-height: 25px;
+		width: 500px;
+		margin-left: 60px;
+		margin-bottom: 30px;
+		text-align: left;
+	}
+
+	.more{
+		z-index: 2;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: bold;
+		text-decoration: none;
+		font-size: 1rem;
+		color: #000000;
+		background-color: #ffffff;
+		margin-left: 60px;
+		padding: 12px 20px;
+		border-radius: 20px;
+		transition: background-color 0.4s, color 0.4s ease;
+	}
+
+	.more:hover{
+		background-color: #000000;
+		color: #ffffff;
+		transition: background-color 0.3s, color 0.3s ease;
+	}
+
+	.banner1{
+		margin-top: 100px;
+		max-width: 100vw;
+		overflow: hidden;
+		height: 80vh;
+		background-image: url(https://cdn.shopify.com/s/files/1/0744/0203/files/01.WB_SeptemberCapsule_LaunchBanner_3000x1270_20230901_jx_desktop_0651c4b0-061a-47f0-b7fe-b6a5e4fc72d9_1920x.jpg?v=1694533271);
+		background-position: center;
+		background-size: cover;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		margin-bottom: 100px; /* probly will delete this */
+	}
+
+	.bannerTitle1{
+		font-family: 'Montserrat', sans-serif;
+		color: #ffffff;
+
+		font-size: 3rem;
+		width: 30%;
+		margin-left: 60px;
+	}
+
+	.bannerText1{
+		color: #ffffff;
+		font-family: 'Roboto', sans-serif;
+		font-size: 1.2rem;
+		width: 30%;
+		margin-left: 60px;
+	}
+
+
+	.banner{
+		margin-top: 100px;
+		max-width: 100vw;
+		height: 70vh;
+		background-image: url(https://images.ctfassets.net/wl6q2in9o7k3/5riMqHjStV6GiIuYNDgP9N/37f4be1f332799982dd01004d16814b6/WOMENS_BESTSELLERS_DESKTOP.jpg?w=1920&q=100&fm=webp);
+		background-position: center;
+		background-size: cover;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		margin-bottom: 200px; /* probly will delete this */
+	}
+	
+	.bannerTitle{
+		font-family: 'Montserrat', sans-serif;
+		
+		font-size: 3rem;
+		width: 30%;
+		margin-left: 60px;
+	}
+
+	.bannerText{
+		font-family: 'Roboto', sans-serif;
+		font-size: 1.2rem;
+		width: 30%;
+		margin-left: 60px;
+	}
+
+	.more2{
+		font-family: 'Montserrat', sans-serif;
+		font-weight: bold;
+		text-decoration: none;
+		font-size: 1rem;
+		color: #000000;
+		background-color: #ffffff;
+		margin-left: 60px;
+		padding: 12px 20px;
+		border-radius: 20px;
+		transition: background-color 0.4s, color 0.4s ease;
+	}
+
+	.more2:hover{
+		background-color: #000000;
+		color: #ffffff;
+		transition: background-color 0.3s, color 0.3s ease;
+	}
+	
+
+	@media screen and (max-width: 767px) {
+		.hero{
+		z-index: 0;
+		position: relative;
+		height: 80vh;
+		max-width: 100vw !important;
+		background-position: right;
+		background-size: cover;
+	}
+
+	.hero > h2{
+		width: 220px;
+		text-align: left;
+		margin-left: 30px;
+		font-size: 1rem;
+	}
+
+	.hero > p{
+		font-size: 1rem;
+		position: relative;
+		line-height: 25px;
+		width: 300px;
+		margin-left: 30px;
+	}
+
+	.herosales{
+		z-index: 0;
+		position: relative;
+		height: 80vh;
+		max-width: 100vw !important;
+		background-position: left;
+		background-size: cover;
+	}
+
+	.herosales{
+		z-index: 0;
+		position: relative;
+		height: 80vh;
+		max-width: 100vw !important;
+		background-position: right;
+		background-size: cover;
+	}
+
+	.herosales > h2{
+		width: 220px;
+		text-align: left;
+		margin-left: 30px;
+		font-size: 1rem;
+	}
+
+	.herosales > p{
+		font-size: 1rem;
+		position: relative;
+		line-height: 25px;
+		width: 300px;
+		margin-left: 30px;
+	}
+
+	.more{
+		font-size: 0.9rem;
+		background-color: #ffffff;
+		margin-left: 30px;
+		padding: 12px 20px;
+		border-radius: 20px;
+	}
+
+	.banner{
+		margin-top: 200px;
+		max-width: 100vw;
+		height: 70vh;
+		background-size: cover;
+		background-position: right;
+	}
+	
+	.bannerTitle{
+		font-size: 2rem;
+		width: 50%;
+		margin-left: 30px;
+	}
+
+	.bannerText{
+		font-weight: bold;
+		font-size: 1.2rem;
+		width: 70%;
+		margin-left: 30px;
+	}
+
+	.more2{
+		margin-left: 30px;
+		padding: 12px 20px;
+		border-radius: 20px;
+	}
+
+	.banner1{
+		background-position: center;
+	}
+
+	.bannerTitle1{
+		font-size: 1.2rem;
+		width: 50%;
+		margin-left: 30px;
+	}
+
+	.bannerText1{
+		font-size: 1rem;
+		width: 60%;
+		margin-left: 30px;
+	}
+	}
+
+
+</style>
