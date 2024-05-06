@@ -1,0 +1,122 @@
+---
+import { Image } from "astro:assets"
+import logo from '../../../src/images/logo.jpg'
+import Menu from '../../components/reactComponents/Menu'
+---
+
+
+<nav class="navbar">
+    <a href="/">
+      <Image class="logo" src={logo} alt="GYMLAND LOGO" />
+    </a>
+    <div class="links-container">
+      <a class="link" href="/sproducts">Favoritos</a>
+      <a class="link" href="/products">Gymshark</a>
+      <a class="link" href="/wbest">Women'sBest</a>
+      <Menu client:load/>
+    </div>
+  </nav>
+  
+  <style>
+  
+    .logo {
+      height: auto;
+      width: 60px;
+      margin-left: 30px;
+      text-align: right;
+    }
+  
+    .navbar {
+      z-index: 2;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 80px;
+      max-width: 100%;
+      background-color: #000000;
+      font-family: "Montserrat", sans-serif;
+  
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .links-container {
+      padding-top: 2px;
+      width: 60%;
+      height: 100%;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      align-items: start;
+    }
+  
+    .links-container > a {
+      color: #ffffff;
+      margin: 0 17px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+  
+    .links-container > a:hover {
+      color: #8d99ae;
+      transition: color 0.3s ease;
+    }
+  
+    @media only screen and (max-width: 767px) {
+      .link {
+        display: none;
+      }
+  
+      .links-container {
+        height: 100%;
+        padding-top: 6px;
+        padding-right: 4px;
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items: start;
+      }
+  
+      .logo-container {
+        margin-left: 10px;
+      }
+    }
+  
+    @media screen and (max-width: 767px) {
+      .logo-container {
+        width: auto;
+        padding-left: 10px;
+        text-align: left;
+      }
+  
+      .logo {
+        height: auto;
+        width: 50px;
+      }
+  
+      .navbar {
+        font-family: "Montserrat", sans-serif;
+  
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+  
+      .links-container {
+        width: 80%;
+      }
+  
+      .links-container > a {
+        margin: 0 10px;
+        font-size: 0.9rem;
+        transition: color 0.3s ease;
+      }
+  }
+  
+  </style>

@@ -1,0 +1,76 @@
+---
+import { FaInstagram } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
+import { IoMdMail } from "react-icons/io";
+
+---
+
+<div class="footer">
+    <p>contact</p>
+    <a class="link" href="https://www.instagram.com/gymlandhn/" target="_blank">
+      <FaInstagram client:load/>
+    </a>
+    <a class="link" href="https://www.facebook.com/gymlandhn?locale=es_LA" target="_blank">
+      <FaFacebook client:load/>
+    </a>
+    <a class="link" href="https://wa.me/+50488704030" target="_blank">
+        <FaWhatsapp client:load/>
+    </a>
+    <a class="link" href="mailto:gymlandhn@gmail.com" target="_blank">
+        <IoMdMail client:load/>
+    </a>
+    <a class="link" class="link-mail" href="mailto:josevgdesarrollador@gmail.com.com" target="_blank">
+      <p class="link-mail">josevgdesarrollador@gmail.com</p>
+  </a>
+  
+  </div>
+  
+  
+  <style>
+    .footer {
+      background-color: #000000;
+      height: 100px;
+  
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .links > p {
+      color: #ffffff;
+    }
+  
+    .link {
+      color: #ffffff;
+      font-size: 1.5rem;
+      margin-right: 30px;
+    }
+  
+    .link-mail{
+      color: #ffffff;
+      text-decoration: none;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-size: 1rem;
+    }
+  
+    @media screen and (max-width: 768px) {
+  
+  
+    .link {
+      color: #ffffff;
+      font-size: 1rem;
+      margin-right: 10px;
+    }
+  
+    .link-mail{
+      color: #ffffff;
+      text-decoration: none;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-size: 0.8rem;
+      width: 100px;
+    }
+    }
+  </style>
+  

@@ -1,0 +1,176 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import gymsharkProducts from "../../components/producstData/gymsharkProducts";
+import Footer from "../../components/astroComponents/Footer.astro";
+
+export async function getStaticPaths() {
+  const info = gymsharkProducts;
+
+  return info.map((p) => {
+    return {
+      params: { name: p.name },
+      props: { p },
+    };
+  });
+}
+
+const { name } = Astro.params;
+const { p } = Astro.props;
+---
+
+<Layout title={name}>
+  <div class="gallery-container">
+    <div class="gallery-images">
+      <div class="gallery-inner">
+        <img loading="lazy" class="gallery-image" src={p.image1} />
+        <img loading="lazy" class="gallery-image" src={p.image2} />
+        <img loading="lazy" class="gallery-image" src={p.image3} />
+        <img loading="lazy" class="gallery-image" src={p.image4} />
+        <img loading="lazy" class="gallery-image" src={p.image5} />
+        <img loading="lazy" class="gallery-image" src={p.image6} />
+      </div>
+    </div>
+    <div class="gallery-info">
+      <div class="box">
+        <h2>{p.productName}</h2>
+        <h2>L.{p.price}</h2>
+        { p.sales && <strong class="price sales">Oferta: {p.packet} L. {p.sales}</strong>}
+        <p>{p.color}</p>
+        <p>{p.category}</p>
+        <p class="space">Size: {p.size}</p>
+        <a class="wlink" href=`https://api.whatsapp.com/send?phone=+50488704030&text=¡Hola! en que podemos ayudarte?`
+         target="_blank">
+        contactar</a>
+      </div>
+    </div>
+  </div>
+  <Footer/>
+</Layout>
+
+<style>
+  .gallery-container {
+    padding: 120px 60px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gallery-info {
+    position: fixed;
+    top: 100px;
+    right: 200px;
+  }
+
+  .gallery-image {
+    max-width: 50%;
+    height: auto;
+  }
+
+  .gallery-inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h2 {
+    font-family: "Montserrat", sans-serif;
+
+  }
+
+  .sales{
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    border-radius: 14px;
+    background-color: #000000;
+    padding: 10px;
+    width: auto;
+    position:relative;
+  }
+
+  p {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    width: 300px;
+    padding: 10px 0;
+  }
+
+  .space{
+    margin-bottom: 30px;
+  }
+
+  .wlink{
+    font-family: 'Montserrat', sans-serif;
+		font-weight: bold;
+		text-decoration: none;
+		font-size: 1rem;
+		color: #ffffff;
+		background-color: #000000;
+		
+		padding: 10px 14px;
+		border-radius: 20px;
+		transition: background-color 0.4s, color 0.4s ease;
+  }
+
+  .wlink:hover{
+    background-color: #5e5a5a;
+		transition: background-color 0.3s, color 0.3s ease;
+  }
+
+  
+
+  /* media querys */
+  @media screen and (max-width: 768px) {
+    .gallery-container {
+      width: 100%;
+      height: 120vh;
+      overflow-x: auto;
+      padding: 90px 0;
+    }
+
+    .gallery-images {
+      display: flex;
+      flex-wrap: nowrap;
+      scroll-snap-type: x mandatory;
+      overflow-x: scroll;
+      -webkit-overflow-scrolling: touch;
+      align-items: flex-start;
+    }
+
+    .gallery-inner {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .gallery-image {
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+      max-width: 80%; /* Reducir el ancho al 48% */
+      max-height: 30%; /* Reducir la altura al 48% */
+      height: auto;
+    }
+
+    .gallery-info {
+      margin-top: 40px;
+      position: static;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .box {
+      width: 100%;
+      text-align: center;
+    }
+
+    h2 {
+      font-family: "Montserrat", sans-serif;
+      color: #000000;
+    }
+
+    p {
+      font-family: "Roboto", sans-serif;
+      font-size: 1.1rem;
+      color: #000000;
+      width: 100%;
+    }
+  }
+</style>
