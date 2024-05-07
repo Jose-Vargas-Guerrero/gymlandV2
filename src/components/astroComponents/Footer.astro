@@ -26,51 +26,56 @@ import { IoMdMail } from "react-icons/io";
   
   </div>
   
-  
   <style>
+  .footer {
+    background-color: #000000;
+    height: 100px;
+    max-width: 100vw;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .links > p {
+    color: #ffffff;
+  }
+
+  .link {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-right: 30px;
+  }
+
+  .link-mail{
+    color: #ffffff;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
+  }
+
+  @media screen and (max-width: 768px) {
+
     .footer {
-      background-color: #000000;
-      height: 100px;
-  
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-    }
-  
-    .links > p {
-      color: #ffffff;
-    }
-  
-    .link {
-      color: #ffffff;
-      font-size: 1.5rem;
-      margin-right: 30px;
-    }
-  
-    .link-mail{
-      color: #ffffff;
-      text-decoration: none;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      font-size: 1rem;
-    }
-  
-    @media screen and (max-width: 768px) {
-  
-  
-    .link {
-      color: #ffffff;
-      font-size: 1rem;
-      margin-right: 10px;
-    }
-  
-    .link-mail{
-      color: #ffffff;
-      text-decoration: none;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      font-size: 0.8rem;
-      width: 100px;
-    }
-    }
-  </style>
-  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .link {
+    color: #ffffff;
+    font-size: 1rem;
+    margin-right: 10px;
+  }
+
+  .link-mail{
+    color: #ffffff;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 0.8rem;
+    width: 100px;
+  }
+  }
+</style>
