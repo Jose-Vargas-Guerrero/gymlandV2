@@ -297,7 +297,19 @@ const gymsharkProducts = [
         category: 'Body fit',
         size: 'S',
         price: 1190
-    }
+    },
+    {
+        id: 18,
+        name: 'Cycling-Shorts-Panther',
+        productName: 'Cycling Shorts',
+        image1: 'https://github.com/Jose-Vargas-Guerrero/gymlandImages/blob/main/gymsharkImages/panteraNegra1.jpg?raw=true',
+        image2: 'https://github.com/Jose-Vargas-Guerrero/gymlandImages/blob/main/gymsharkImages/panteraNegra2.jpg?raw=true',
+        image3: 'https://github.com/Jose-Vargas-Guerrero/gymlandImages/blob/main/gymsharkImages/panteraNegra3.jpg?raw=true',
+        color: 'Black',
+        category: 'Body fit',
+        size: 'S',
+        price: 990,
+    },
 ]
 
 export default gymsharkProducts;

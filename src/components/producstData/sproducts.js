@@ -26,7 +26,7 @@ const wproducts = [
         category: 'Body fit',
         size: 'S',
         price: 360,
-        stock: 'Color negro agotado',
+        stock: 'Agotado',
     },
     {
         id: 3,
@@ -39,7 +39,8 @@ const wproducts = [
         color: 'Negro, Morado Claro, Morado Oscuro',
         category: 'Body fit',
         size: 'S | M',
-        price: 395
+        price: 395,
+        stock: 'Negro Agotado',
     },
     {
         id: 4,
@@ -50,7 +51,8 @@ const wproducts = [
         color: 'Negro, Gris, Beige, Celeste Claro',
         category: 'Body fit',
         size: 'S',
-        price: 395
+        price: 395,
+        stock: 'Negro Agotado'
     },
     {
         id: 5,
@@ -61,11 +63,11 @@ const wproducts = [
         image3: 'https://github.com/Jose-Vargas-Guerrero/gymlandImages/blob/main/shein/bykershort3.jpg?raw=true',
         image4: 'https://github.com/Jose-Vargas-Guerrero/gymlandImages/blob/main/shein/bykershort4.jpg?raw=true',
         image5: 'https://github.com/Jose-Vargas-Guerrero/gymlandImages/blob/main/shein/bykershort5.JPG?raw=true',
-        color: 'Negro, Gris Claro, Rosado, Gris Oscuro',
+        color: 'Negro, Gris Claro, Naranja, Gris Oscuro',
         category: 'Body fit',
         size: 's',
         price: 430,
-        stock: 'Color negro agotado',
+        stock: 'Agotado Negro Gris Naranja',
     },
     {
         id: 6,
@@ -118,7 +120,7 @@ const wproducts = [
         category: 'Body fit',
         size: 'S | M',
         price: 850,
-        stock: 'talla S agotada',
+        stock: 'Agotado',
     },
     {
         id: 10,
@@ -273,12 +275,12 @@ const wproducts = [
         category: 'Body fit',
         size: 'S | M',
         price: 1695,
-        stock: 'Talla S Agotado',
+        stock: 'Agotado',
     },
     {   
         id: 22,
         name: 'Set-Completo-Black-Wolves',
-        productName: 'Set Completo Negro',
+        productName: 'Sports Bra',
         image1: 'https://github.com/Jose-Vargas-Guerrero/gymlandImages/blob/main/shein/SportsBraWolve1.JPG?raw=true',
         image2: 'https://github.com/Jose-Vargas-Guerrero/gymlandImages/blob/main/shein/SportsBraWolve2.JPG?raw=true',
         color: 'Negro',

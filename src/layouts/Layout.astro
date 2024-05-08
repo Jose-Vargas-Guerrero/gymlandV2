@@ -5,6 +5,7 @@ interface Props {
 const { title } = Astro.props;
 
 import Navbar from '../components/astroComponents/Navbar.astro';
+import { Analytics } from '@vercel/analytics/react';
 ---
 
 <!doctype html>
@@ -20,6 +21,7 @@ import Navbar from '../components/astroComponents/Navbar.astro';
 	<body>
 		<Navbar/>
 		<slot />
+		<Analytics />
 	</body>
 </html>
 <style is:global>
