@@ -32,11 +32,11 @@ const { p } = Astro.props;
     </div>
     <div class="gallery-info">
       <div class="box">
-        <h2 class="boxpname">{p.productName}</h2>
-        <h2 class="boxprice">L.{p.price}</h2>
+        <h2>{p.productName}</h2>
+        <h2>L.{p.price}</h2>
         { p.sales && <strong class="price sales">Oferta: {p.packet} L. {p.sales}</strong>}
-        <p class="boxp">{p.color}</p>
-        <p class="boxp">{p.category}</p>
+        <p>{p.color}</p>
+        <p>{p.category}</p>
         <p class="space">Size: {p.size}</p>
         <a class="wlink" href=`https://api.whatsapp.com/send?phone=+50488704030&text=¡Hola! en que podemos ayudarte?`
          target="_blank">
@@ -90,28 +90,9 @@ const { p } = Astro.props;
     width: 300px;
   }
 
-  
-    .boxpname{
-      font-size: 2rem;
-      font-weight: bold;
-      margin-bottom: 0.8rem;
-      }
-
-      .boxprice{
-        font-size: 1.2rem;
-        margin-bottom: 0.8rem;
-      }
-
-      .boxp{
-        font-size: 1.2rem;
-        margin-bottom: 0.8rem;
-      }
-
-    .space{
-      margin-bottom: 30px;
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-    }
+  .space{
+    margin-bottom: 30px;
+  }
 
   .wlink{
     font-family: 'Montserrat', sans-serif;

@@ -18,7 +18,7 @@ import Footer from "../../components/astroComponents/Footer.astro";
                 <img loading="lazy" class="product-image fade" src={p.image2} alt={p.name} />
               </div>
               
-              <h3 class="product-name">{p.productName}</h3>
+              <h4 class="product-name">{p.productName}</h4>
               <strong class="stock">{p.stock}</strong>
               <p class="product-type">{p.category}</p>
               <p class="color">{p.color}</p>
@@ -82,8 +82,6 @@ import Footer from "../../components/astroComponents/Footer.astro";
   }
 
   .product-name {
-    font-size: 1.1rem;
-    font-weight: bold;
     font-family: "Roboto", sans-serif;
     margin: 10px 0;
   }
